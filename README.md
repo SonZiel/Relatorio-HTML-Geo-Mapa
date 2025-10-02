@@ -13,6 +13,7 @@ No entanto, é possível visualizar o funcionamento básico do mapa com dados de
 - **HTML5**
 - **CSS3**
 - **JavaScript**
+- **SQL**
 - **[Leaflet.js](https://leafletjs.com/)** (biblioteca para mapas interativos)
 
 ---
