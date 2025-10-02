@@ -27,4 +27,13 @@ No entanto, é possível visualizar o funcionamento básico do mapa com dados de
 ## 🎯 Como usar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/mapa-interativo.git
+   git clone https://github.com/SqnZiel/Relatorio-HTML-Geo-Mapa
+
+## 📸 Demonstração
+<img width="1905" height="941" alt="image" src="https://github.com/user-attachments/assets/014969bc-73b9-47a5-bb19-dd7a872486bb" />
+<img width="1911" height="837" alt="image" src="https://github.com/user-attachments/assets/8725a86c-24db-4658-8ca0-b12064cccf69" />
+
+## 👨‍💻 Autor
+Desenvolvido por **Jesiel**
+📧 Email para serviço: zielalves.contato@gmail.com.
+💼 LinkedIn https://www.linkedin.com/in/jesiel-kalebe-6ab207209/
