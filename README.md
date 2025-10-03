@@ -32,7 +32,8 @@ No entanto, é possível visualizar o funcionamento básico do mapa com dados de
 
 ## 📸 Demonstração
 <img width="1905" height="941" alt="image" src="https://github.com/user-attachments/assets/014969bc-73b9-47a5-bb19-dd7a872486bb" />
-<img width="1911" height="837" alt="image" src="https://github.com/user-attachments/assets/8725a86c-24db-4658-8ca0-b12064cccf69" />
+<img width="1914" height="977" alt="image" src="https://github.com/user-attachments/assets/894a3172-bc7b-4b8d-82bf-0130ca4de702" />
+
 
 ## 👨‍💻 Autor
 Desenvolvido por **Jesiel**
