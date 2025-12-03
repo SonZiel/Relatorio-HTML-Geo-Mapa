@@ -43,76 +43,7 @@
           </tr>
         </thead>
         <tbody>
-          <snk:query var="lista">
-           SELECT
-              CASE 
-                WHEN C.AD_REGIAODEMINAS = 01
-                  THEN 'Região de BH'
-                WHEN C.AD_REGIAODEMINAS = 04
-                  THEN 'Região de Montes Claros'
-                WHEN C.AD_REGIAODEMINAS = 05
-                  THEN 'Região de Teófilo Otoni'
-                WHEN C.AD_REGIAODEMINAS = 03
-                  THEN 'Região de GV'
-                WHEN C.AD_REGIAODEMINAS = 02
-                  THEN 'Região de Ipatinga'
-                WHEN C.AD_REGIAODEMINAS = 06
-                  THEN 'Região de Juiz de Fora'
-                WHEN C.AD_REGIAODEMINAS = 09
-                  THEN 'Região de Varginha'
-                WHEN C.AD_REGIAODEMINAS = 10
-                  THEN 'Região de Pouso Alegre'
-                WHEN C.AD_REGIAODEMINAS = 07
-                  THEN 'Região de Uberaba'
-                WHEN C.AD_REGIAODEMINAS = 08
-                  THEN 'Região de Uberlândia'
-                WHEN C.AD_REGIAODEMINAS = 12
-                  THEN 'Região de Patos de Minas'
-                WHEN C.AD_REGIAODEMINAS = 11
-                  THEN 'Região de Divinópolis'
-              END AS REGIAO,
-              SUM(
-                  CASE 
-                      WHEN CAB.CODTIPOPER IN (1100, 1122, 1124, 1130, 1200, 1205, 1208, 1616, 1162) THEN CAB.VLRNOTA   -- vendas
-                      WHEN CAB.CODTIPOPER IN (1201,1202,1203,1204, 1251,3202) THEN -CAB.VLRNOTA  -- devoluções
-                      ELSE 0
-                  END
-              ) AS TOTAL_VENDAS
-
-            FROM TGFCAB CAB
-            JOIN TGFPAR PAR ON PAR.CODPARC = CAB.CODPARC
-            JOIN TSICID C ON C.CODCID = PAR.CODCID
-
-            WHERE CAB.DTNEG BETWEEN :PERIODO.INI AND :PERIODO.FIN
-
-            GROUP BY 
-                  CASE 
-                    WHEN C.AD_REGIAODEMINAS = 01
-                      THEN 'Região de BH'
-                    WHEN C.AD_REGIAODEMINAS = 04
-                      THEN 'Região de Montes Claros'
-                    WHEN C.AD_REGIAODEMINAS = 05
-                      THEN 'Região de Teófilo Otoni'
-                    WHEN C.AD_REGIAODEMINAS = 03
-                      THEN 'Região de GV'
-                    WHEN C.AD_REGIAODEMINAS = 02
-                      THEN 'Região de Ipatinga'
-                    WHEN C.AD_REGIAODEMINAS = 06
-                      THEN 'Região de Juiz de Fora'
-                    WHEN C.AD_REGIAODEMINAS = 09
-                      THEN 'Região de Varginha'
-                    WHEN C.AD_REGIAODEMINAS = 10
-                      THEN 'Região de Pouso Alegre'
-                    WHEN C.AD_REGIAODEMINAS = 07
-                      THEN 'Região de Uberaba'
-                    WHEN C.AD_REGIAODEMINAS = 08
-                      THEN 'Região de Uberlândia'
-                    WHEN C.AD_REGIAODEMINAS = 12
-                      THEN 'Região de Patos de Minas'
-                    WHEN C.AD_REGIAODEMINAS = 11
-                      THEN 'Região de Divinópolis'    
-                  END
-            ORDER BY TOTAL_VENDAS DESC
+          <snk:query var="lista"> <!-- Aqui é onde a query do banco vai-->
 
           </snk:query>
 
@@ -4790,3 +4721,4 @@ const geojson = L.geoJSON(geoData, {
 </script>
 </body>
 </html>
+
